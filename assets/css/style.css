@@ -1,6 +1,11 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Poppins:wght@100;200;300;400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@600&display=swap");
+@import './constants.css';
+
+html {
+  font-size: 62.5%;
+}
 
 body {
   margin: 0;
@@ -15,12 +20,52 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.nav-link {
+  color: #212121;
+  --bs-navbar-nav-link-padding-x: 1.7rem;
+  --bs-navbar-nav-link-padding-y: 1.7rem;
+}
+
+main.home {
+  padding-top: 13.4rem;
+}
+
+.fs-5 {
+  font-size: calc(1.315rem + 0.78vw) !important;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  width: 22rem;
+  height: 4.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: none;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  font-weight: 500;
+  border-radius: var(--bs-btn-border-radius);
+}
+
 .btn-primary {
   background-color: var(--bs-btn-bg);
   color: var(--bs-btn-color);
-  -webkit-transition: background-color 0.3s, color 0.3s;
-  transition: background-color 0.3s, color 0.3s;
+  -webkit-transition: var(--bs-btn-bg) 0.3s, color 0.3s;
+  transition: var(--bs-btn-bg) 0.3s, color 0.3s;
 }
+
+/* .text-secondary {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important;
+} */
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
@@ -30,13 +75,23 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   /* line-height: 1.2; */
 }
 
+#home-heading {
+  margin-top: 0;
+}
+
 h1 {
+  margin-top: 0;
   display: block;
   font-size: 2em;
   margin-block-start: 0.67em;
   margin-block-end: 0.67em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+}
+
+a {
+  color: var(--bs-link-color);
+  /* text-decoration: underline; */
 }
 
 .position-relative {
@@ -47,10 +102,54 @@ h1 {
   text-align: center !important;
 }
 
+.home .heading h1::after, .home .heading .h1::after {
+  background: url("../images/underline-hand-multi.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 33px;
+  margin: 0.6rem auto 0;
+}
+
 @media (min-width: 1200px) {
   .home .heading h1, .home .heading .h1 {
     line-height: 10.4rem;
     margin-bottom: 6.1rem;
     font-size: 8rem;
   }
+  
+  .fs-5 {
+    font-size: 1.9rem!important;
+  }
 }
+
+@media (min-width: 992px) {
+  #header {
+    padding-top: 4.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .home .heading h1::before, .home .heading .h1::before {
+    background: url("../images/ic-asterix-hand.svg");
+    content: "";
+    display: block;
+    width: 21px;
+    height: 23px;
+    position: absolute;
+    right: -1.5rem;
+    top: -0.5rem;
+  }
+  
+  .home .heading h1::after, .home .heading .h1::after {
+    width: 417px;
+  }
+  
+  .home .heading {
+    margin-bottom: 16.7rem;
+  }
+}
+
