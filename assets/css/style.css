@@ -155,37 +155,37 @@ h2 + p, .h2 + p {
   border: var(--bs-card-border-width) solid var(--bs-card-border-color);
   border-radius: var(--bs-card-border-radius);
 }
-  .card-text {
-    color: #a4a4a4;
-  }
-  
-  /* .highlight::after {
-    background: url("../images/ic-highlight.svg");
-    content: "";
-    width: 7.8rem;
-    height: 4.6rem;
-    position: absolute;
-    right: auto;
-    left: 12.7rem;
-    top: -2.5rem;
-  }
-  
-  .card-title {
-    margin-bottom: 2.1rem;
-  } */
-  
-  
-  /* position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  height: var(--bs-card-height);
-  color: var(--bs-body-color);
-  word-wrap: break-word;
-  background-color: var(--bs-card-bg);
-  background-clip: border-box;
-  border: var(--bs-card-border-width) solid var(--bs-card-border-color);
-  border-radius: var(--bs-card-border-radius); */
+.card-text {
+  color: #a4a4a4;
+}
+
+/* .highlight::after {
+  background: url("../images/ic-highlight.svg");
+  content: "";
+  width: 7.8rem;
+  height: 4.6rem;
+  position: absolute;
+  right: auto;
+  left: 12.7rem;
+  top: -2.5rem;
+}
+
+.card-title {
+  margin-bottom: 2.1rem;
+} */
+
+
+/* position: relative;
+display: flex;
+flex-direction: column;
+min-width: 0;
+height: var(--bs-card-height);
+color: var(--bs-body-color);
+word-wrap: break-word;
+background-color: var(--bs-card-bg);
+background-clip: border-box;
+border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+border-radius: var(--bs-card-border-radius); */
 /* } */
 
 .d-block {
@@ -213,9 +213,9 @@ img {
   position: relative;
 }
 
-.card .card-title.highlight::after {
-  background: url("../images/ic-highlight.svg");
+.highlight:after {
   content: "";
+  background:red url("../images/ic-highlight.svg");
   width: 7.8rem;
   height: 4.6rem;
   position: absolute;
@@ -224,6 +224,79 @@ img {
   top: -2.5rem;
 }
 
+.home-intro {
+  margin-bottom: 6.7rem;
+}
+
+.home-product {
+  margin-bottom: 6.7rem;
+}
+
+.home-product .container:last-child div[class^=col-]::before {
+  background: url("../images/handrwritting-memmory-used.svg");
+  content: "";
+  width: 21.923rem;
+  height: 5.12rem;
+  position: absolute;
+  right: 3.6rem;
+  top: -4.9rem;
+}
+
+.home-product .container:last-child div[class^=col-]::after {
+  background: url("../images/ic-waves.svg");
+  content: "";
+  width: 11.8rem;
+  height: 1.6rem;
+  position: absolute;
+  right: 7.1rem;
+  top: 2.8rem;
+}
+
+.home-product .container:last-child div[class^=col-] {
+  position: relative;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.home-product h2, .home-product .h2 {
+  margin-bottom: 1.8rem;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+
+.home-product p {
+  margin-bottom: 7.8rem;
+}
+
+.home-ux p {
+  margin-bottom: 6.9rem;
+  color: #7a7a7a;
+}
+
+.home-other h2, .home-other .h2 {
+  position: relative;
+  margin-bottom: 7.6rem;
+}
+
+.home-other h2::before, .home-other .h2::before {
+  background: url("../images/handwritting-elipse.svg");
+  content: "";
+  width: 23.5rem;
+  height: 9.8rem;
+  position: absolute;
+  left: calc(50% - 12.15rem);
+  top: -2.4rem;
+}
 
 @media (min-width: 768px) {
   .home .heading h1::before, .home .heading .h1::before {
@@ -251,6 +324,14 @@ img {
   
   .card .card-title.highlight::after {
     right: -1.2rem;
+  }
+  
+  .home-intro {
+    margin-bottom: 17rem;
+  }
+  
+  .home-product {
+    margin-bottom: 17.4rem;
   }
 }
 
@@ -283,6 +364,11 @@ img {
   .card img {
     margin-bottom: 3.7rem;
   }
+  
+  .home-product .container:last-child div[class^=col-]::after {
+    right: 13.1rem;
+    top: 4.8rem;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -307,10 +393,26 @@ img {
   .card .card-title.highlight::after {
     right: 7.2rem;
   }
+  
+  .home-product .container:last-child div[class^=col-]::before {
+    right: 4rem;
+  }
+  
+  .home-product .container:last-child div[class^=col-]::after {
+    right: 20.1rem;
+  }
 }
 
 @media (min-width: 1400px) {
   .card .card-title.highlight::after {
     right: 10.4rem;
+  }
+  
+  .home-product .container:last-child div[class^=col-]::before {
+    right: 10rem;
+  }
+  
+  .home-product .container:last-child div[class^=col-]::after {
+    right: 26.1rem;
   }
 }
