@@ -375,6 +375,10 @@ p a {
   top: 1.1rem;
 }
 
+.home-tabbed {
+  margin-bottom: 11.3rem;
+}
+
 @media (min-width: 768px) {
   .home .heading h1::before, .home .heading .h1::before {
     background: url("../images/ic-asterix-hand.svg");
@@ -415,6 +419,10 @@ p a {
     padding-bottom: 11.1rem;
   }
   
+  .home-featured {
+    padding: 0 0 5.55rem;
+  }
+  
   .home-featured-our {
     padding-top: 12.6rem;
   }
@@ -438,6 +446,10 @@ p a {
     right: 5.9rem;
     top: -3rem;
     left: auto;
+  }
+  
+  .home-tabbed {
+    padding: 5.55rem 0;
   }
 }
 
