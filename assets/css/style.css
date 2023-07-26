@@ -361,6 +361,20 @@ img {
   background: none;
 }
 
+p a {
+  color: #7a7a7a;
+}
+
+.btn-outline-secondary.btn-tc::before {
+  background: url("../images/ic-tc.svg");
+  content: "";
+  width: 3.2rem;
+  height: 1.6rem;
+  position: absolute;
+  left: 2rem;
+  top: 1.1rem;
+}
+
 @media (min-width: 768px) {
   .home .heading h1::before, .home .heading .h1::before {
     background: url("../images/ic-asterix-hand.svg");
@@ -413,6 +427,17 @@ img {
     padding-right: 0;
     padding-left: 3.6rem;
     margin-bottom: 0;
+  }
+  
+  .home-featured h2 + p::after, .home-featured .h2 + p::after {
+    background: url("../images/handwritting-new.svg");
+    content: "";
+    width: 2.9rem;
+    height: 2.9rem;
+    position: absolute;
+    right: 5.9rem;
+    top: -3rem;
+    left: auto;
   }
 }
 
@@ -511,5 +536,9 @@ img {
   
   .home-product .container:last-child div[class^=col-]::after {
     right: 26.1rem;
+  }
+  
+  .d-xxl-flex {
+    display: flex !important;
   }
 }
